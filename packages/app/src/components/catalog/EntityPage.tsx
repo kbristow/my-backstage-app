@@ -32,7 +32,8 @@ import {
 import {EmbeddedDocsRouter as DocsRouter} from '@backstage/plugin-techdocs';
 import {Grid} from '@material-ui/core';
 import React from 'react';
-import { LatestRunCard } from '@internal/plugin-my-plugin/src/components/LatestRunCard';
+import {LatestRunCard} from '@internal/plugin-my-plugin/src/components/LatestRunCard';
+import {Router as MyPluginRouter} from "@internal/plugin-my-plugin//src/components/Router";
 
 
 const CICDSwitcher = ({ entity }: { entity: Entity }) => {
@@ -97,6 +98,11 @@ const ServiceEntityPage = ({ entity }: { entity: Entity }) => (
       title="Docs"
       element={<DocsRouter entity={entity} />}
     />
+    <EntityPageLayout.Content
+      path="/my-plugin"
+      title="My Plugin"
+      element={<MyPluginRouter entity={entity} />}
+    />
   </EntityPageLayout>
 );
 
@@ -131,6 +137,11 @@ const DefaultEntityPage = ({ entity }: { entity: Entity }) => (
       path="/docs/*"
       title="Docs"
       element={<DocsRouter entity={entity} />}
+    />
+    <EntityPageLayout.Content
+      path="/my-plugin"
+      title="My Plugin"
+      element={<MyPluginRouter entity={entity} />}
     />
   </EntityPageLayout>
 );
