@@ -13,7 +13,7 @@ import {apis} from './apis';
 import {EntityPage} from './components/catalog/EntityPage';
 import * as plugins from './plugins';
 import {AppSidebar} from './sidebar';
-import { LatestRunCard } from '@internal/plugin-my-plugin/src/components/LatestRunCard';
+import { AppCard } from '@internal/plugin-my-plugin/src/components/AppCard';
 
 const app = createApp({
   apis,
@@ -57,7 +57,7 @@ const App = () => (
           <Route path="/catalog-import" element={<CatalogImportPage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/settings" element={<UserSettingsPage />} />
-          <Route path="/my-p" element={<LatestRunCard />} />
+          <Route path="/my-p" element={<AppCard />} />
         </FlatRoutes>
       </SidebarPage>
     </AppRouter>

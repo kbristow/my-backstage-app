@@ -32,7 +32,7 @@ import {
 import {EmbeddedDocsRouter as DocsRouter} from '@backstage/plugin-techdocs';
 import {Grid} from '@material-ui/core';
 import React from 'react';
-import {LatestRunCard} from '@internal/plugin-my-plugin/src/components/LatestRunCard';
+import {AppCard} from '@internal/plugin-my-plugin/src/components/AppCard';
 import {Router as MyPluginRouter} from "@internal/plugin-my-plugin//src/components/Router";
 
 
@@ -60,7 +60,7 @@ const OverviewContent = ({ entity }: { entity: Entity }) => (
       <AboutCard entity={entity} variant="gridItem" />
     </Grid>
     <Grid item>
-        <LatestRunCard/>
+        <AppCard/>
     </Grid>
   </Grid>
 );
@@ -99,7 +99,7 @@ const ServiceEntityPage = ({ entity }: { entity: Entity }) => (
       element={<DocsRouter entity={entity} />}
     />
     <EntityPageLayout.Content
-      path="/my-plugin"
+      path="/my-plugin/*"
       title="My Plugin"
       element={<MyPluginRouter entity={entity} />}
     />
@@ -139,7 +139,7 @@ const DefaultEntityPage = ({ entity }: { entity: Entity }) => (
       element={<DocsRouter entity={entity} />}
     />
     <EntityPageLayout.Content
-      path="/my-plugin"
+      path="/my-plugin/*"
       title="My Plugin"
       element={<MyPluginRouter entity={entity} />}
     />

@@ -1,1 +1,1 @@
-export { LatestRunCard } from './LatestRunCard';
+export { AppCard } from './AppCard';
