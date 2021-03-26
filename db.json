@@ -1,0 +1,9 @@
+{
+    "applications": [
+        {
+            "id": 1,
+            "name": "my-golang-application-5",
+            "applicationType": "deployable"
+        }
+    ]
+}
